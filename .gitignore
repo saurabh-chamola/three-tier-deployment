@@ -1,0 +1,34 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE settings
+.vscode/
+.idea/
+
+# Build artifacts (optional)
+dist/
+build/
+
+# Coverage reports (if using Jest or nyc)
+coverage/
+
+# Docker
+docker-compose.override.yml
+
+# Optional: Ignore local database or runtime files
+*.sqlite
+*.pid
