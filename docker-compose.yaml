@@ -5,7 +5,7 @@ services:
     build:
       context: "./backend"
       dockerfile: Dockerfile
-    image: backend/frontend_container:dryrun
+    image: frontend_container:dryrun
     ports:
       - "8085:8085"
     environment:
@@ -19,6 +19,6 @@ services:
     build:
       context: "./my-tailwind-app"
       dockerfile: Dockerfile
-    image: backend/frontend_container:dryrun
+    image: frontend_container:dryrun
     ports:
       - "5175:5173"
