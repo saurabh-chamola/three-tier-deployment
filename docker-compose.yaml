@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  backend:
+    build:
+      context: "./backend"
+      dockerfile: Dockerfile
+    image: backend/frontend_container:dryrun
+    ports:
+      - "8085:8085"
+    environment:
+      - PORT=8085
+      - db_URL=mongodb+srv://sourabhchamola5:9410987248@cluster0.5g013.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      - access_token_secret=sndfjvscujvdsbjsdlbprifnscklndvkj
+      - refresh_token_secret=kbcjdbfjsbnvkljbsdvljkdbsnv
+      - NODE_ENV=development
+
+  frontend:
+    build:
+      context: "./my-tailwind-app"
+      dockerfile: Dockerfile
+    image: backend/frontend_container:dryrun
+    ports:
+      - "5175:5173"

@@ -17,8 +17,6 @@ const PORT = process.env.PORT || 8080;
 
 if (cluster.isPrimary) {
   console.log(`Primary ${process.pid} is running`);
-
-  // Fork a worker for each CPU core
   for (let i = 0; i < cpuCount; i++) {
     cluster.fork();
   }
