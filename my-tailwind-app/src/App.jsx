@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import Post from './pages/post'
+import Post from './pages/Post'
 
 function App() {
   const [count, setCount] = useState(0)
